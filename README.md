@@ -64,23 +64,29 @@ Para testar este projeto é necessario ter instalado o NodeJS, caso não tenha v
 https://nodejs.org/en/download/
 
 Após o instalar o NodeJS, é só clonar o repositorio com o comando:
+
 \$ git clone https://github.com/higoncesar/BootCamp-Scheduling
 
 Entrar dentro da Pasta do Projeto:
+
 \$ cd BootCamp-Scheduling
 
 Instalar as dependencias com o comando:
+
 \$ npm install
 
 Agora você irá renomear o arquivo .env.exemple para .env na raiz do projeto, e alterar os dados de autenticação com o banco de dados dentro deste mesmo aquivo.
 
 Com os dados da conexão com o banco de dados configurado, é necessario rodar as migrations com o comando:
+
 \$ adonis migration:run
 
-Agorá é so rodar o projeto com o comando no terminal para ativar a API
+Agorá é so rodar o projeto com o comando no terminal para ativar a API:
+
 \$ adonis serve --dev
 
 Para ativar o serviço de Filas e Jobs, que no caso é utilizado para envio do e-mail do compartilhamento do evento é só rodar o comando a baixo em uma nova janela do Terminal:
+
 \$ adonis kue:listen
 
 Lembrando que para o envio do e-mail também será necessario alterar as informações de autenticação com o seu serviço de e-mail desejado no arquivo .env
